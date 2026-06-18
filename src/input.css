@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "satoshi";
+  src: url("./font/Satoshi-Regular.otf");
+}
+@font-face {
+  font-family: "Bebasneue";
+  src: url("./font/BebasNeue Regular.otf");
+}
+
+@import "tailwindcss";
+
+@theme {
+  --font-satoshi: "satoshi", "sans-serif";
+}
+@theme {
+  --font-Bebauneue: "Bebasneue", "sans-serif";
+}
