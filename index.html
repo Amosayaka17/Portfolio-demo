@@ -21,10 +21,10 @@
           Ayaka.
         </div>
         <div class="text-neutral-500 text-sm flex space-x-8">
-          <a href="">About</a>
-          <a href="">Skill</a>
-          <a href="">Projects</a>
-          <a href="">Contact</a>
+          <a href="#About">About</a>
+          <a href="#Skills">Skill</a>
+          <a href="#Projects">Projects</a>
+          <a href="#Contact">Contact</a>
         </div>
         <div
           class="text-neutral-900 text-xs rounded-full px-5 py-2 bg-yellow-300 cursor-pointer"
@@ -34,7 +34,7 @@
       </nav>
     </header>
     <!-- Hero section-->
-    <section class="text-white px-20 mt-24 mb-10">
+    <section class="text-white px-20 mt-24 mb-10 hero-animate">
       <!--Left side div-->
       <div class="flex flex-col space-y-4">
         <h6 class="text-2xl text-yellow-300 uppercase font-Bebauneue">
@@ -103,7 +103,7 @@
       <span>⭐</span>
     </div>
     <!--About-->
-    <div class="flex px-20 gap-10 mb-20">
+    <div class="flex px-20 gap-10 mb-20 mt-20 scroll-mt-24 reveal" id="About">
       <div class="">
         <h5 class="text-yellow-300 uppercase text-xs">About Me</h5>
         <p class="text-white text-6xl my-5 font-Bebauneue">WHO i AM</p>
@@ -147,7 +147,7 @@
     </div>
     <!---->
     <hr class="text-neutral-800 my-20 mx-20" />
-    <section class="px-20 mb-20">
+    <section class="px-20 mb-20 scroll-mt-20 reveal" id="Projects">
       <h5 class="text-yellow-300 uppercase text-xs">Selected works</h5>
       <p class="text-white text-6xl my-5 font-Bebauneue">Projects</p>
       <div class="flex w-full justify-center py-11 gap-5 text-neutral-600">
@@ -236,7 +236,7 @@
       </div>
     </section>
     <hr class="text-neutral-800 my-20 mx-20" />
-    <section class="px-20 mb-20">
+    <section class="px-20 mb-20 scroll-mt-20 reveal" id="Skills">
       <h5 class="text-yellow-300 uppercase text-xs">What i use</h5>
       <p class="text-white text-6xl my-5 font-Bebauneue uppercase">Skills</p>
       <div class="flex gap-3">
@@ -279,7 +279,10 @@
       </div>
     </section>
     <hr class="text-neutral-800 my-20 mx-20" />
-    <section class="flex items-center justify-center mb-10">
+    <section
+      class="flex items-center justify-center mb-10 scroll-mt-20"
+      id="Contact"
+    >
       <div
         class="w-300 bg-neutral-900 rounded-2xl border border-neutral-800 flex justify-center items-center flex-col py-20 space-y-5 text-neutral-500"
       >
@@ -301,5 +304,32 @@
         </div>
       </div>
     </section>
+    <hr class="text-neutral-800 mt-20" />
+    <footer class="px-20 py-10">
+      <div class="flex justify-between items-center">
+        <span class="text-2xl text-neutral-700 uppercase font-Bebauneue"
+          >Ayaka</span
+        >
+        <span class="text-neutral-700">&copy; 2026 All rights reserved.</span>
+        <div class="space-x-5">
+          <span class="text-neutral-700">About</span>
+          <span class="text-neutral-700">Work</span>
+          <span class="text-neutral-700">Contact</span>
+        </div>
+      </div>
+    </footer>
+    <script>
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            }
+          });
+        },
+        { threshold: 0.15 }
+      );
+      document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+    </script>
   </body>
 </html>
