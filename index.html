@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Ayaka- Developer</title>
     <link rel="stylesheet" href="./src/output.css" />
   </head>
   <body class="bg-neutral-950 font-satoshi">
@@ -323,13 +323,15 @@
         (entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
-              entry.target.classList.add('visible');
+              entry.target.classList.add("visible");
             }
           });
         },
-        { threshold: 0.15 }
+        { threshold: 0.15 },
       );
-      document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+      document
+        .querySelectorAll(".reveal")
+        .forEach((el) => observer.observe(el));
     </script>
   </body>
 </html>
